@@ -1,0 +1,22 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model ToDoModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+    <title>title</title>
+</head>
+<body>
+<h1>Neues ToDo-Element erstellen</h1>
+<form asp-action="AddElement" method="post">
+    <input asp-for="@Model.todoElement"/>
+    <label asp-for="@Model.todoElement"></label>
+    <button>Speichern</button>
+</form>
+</body>
+</html>
